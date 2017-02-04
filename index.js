@@ -35,7 +35,8 @@ app.post('/pushbutton', cors(), (req, response) => {
                 token: ACCESS_TOKEN,
                 channel: 'test',
                 text: quoteText,
-                as_user: false
+                as_user: false,
+                link_names: true
             },
             json: true,
             headers: {
