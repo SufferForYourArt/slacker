@@ -1,4 +1,4 @@
-const ACCESS_TOKEN = 'xoxp-45409264581-63227063794-137134327652-8f78dc483a8905cdffbe170e43d3a0e4';
+var ACCESS_TOKEN = require('./token').token;
 const peeps = ['@kurtlogan', '@chrissysemens', '@shaun'];
 
 var bodyParser = require('body-parser')
@@ -17,7 +17,7 @@ app.get('/', (request, response) => {
 
 app.post('/pushbutton', cors(), (req, response) => {
     console.log('button pushed:', req.body.value)
-    
+
     const peep = peeps[Math.floor((Math.random() * peeps.length) + 1)];
 
     request('http://api.adviceslip.com/advice', function(error, response, body) {
