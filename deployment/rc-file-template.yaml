@@ -15,7 +15,7 @@ spec:
     spec: 
       containers: 
         - 
-          image: "gcr.io/docker-containers-156417/api:{{tag}}"
+          image: "gcr.io/slacker-157712/api:{{tag}}"
           name: api
           ports: 
             - 
