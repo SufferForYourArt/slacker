@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata: 
   name: api-{{tag}}
 spec: 
-  replicas: 3
+  replicas: 1
   selector: 
     name: api
     version: {{tag}}

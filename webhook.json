@@ -1,14 +1,9 @@
 {
   "eventName": "pushbutton",
-  "url": "https://104.199.46.51/pushbutton",
+  "url": "http://104.199.46.51/pushbutton",
   "requestType": "POST",
-  "headers": {
-    "Content-Type": "application/json"
-  },
   "json": {
-      "type": "note",
-      "title": "{{SPARK_EVENT_VALUE}}",
-      "body": ""
-  },
-  "mydevices": true
+    "name": "{{PARTICLE_EVENT_NAME}}",
+    "value": "{{PARTICLE_EVENT_VALUE}}"
+  }
 }
