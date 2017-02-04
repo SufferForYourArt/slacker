@@ -20,7 +20,8 @@
   "dependencies": {
     "body-parser": "^1.16.0",
     "cors": "^2.8.1",
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "request": "^2.79.0"
   },
   "devDependencies": {
     "particle-cli": "^1.19.2"

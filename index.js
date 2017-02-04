@@ -15,8 +15,8 @@ app.get('/', (request, response) => {
     response.send("Server active!")
 })
 
-app.post('/pushbutton', cors(), (request, response) => {
-    console.log('button pushed:', request.body.value)
+app.post('/pushbutton', cors(), (req, response) => {
+    console.log('button pushed:', req.body.value)
     
     const peep = peeps[Math.floor((Math.random() * peeps.length) + 1)];
 
