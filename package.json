@@ -1,0 +1,23 @@
+{
+  "name": "slacker",
+  "version": "1.0.0",
+  "description": "Server that connects IoT Particle button to Slack",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sufferforyourart/slacker.git"
+  },
+  "author": "Kurt Logan, Chrissy Semens",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sufferforyourart/slacker/issues"
+  },
+  "homepage": "https://github.com/sufferforyourart/slacker#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
