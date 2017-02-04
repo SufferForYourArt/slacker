@@ -1,5 +1,5 @@
 var ACCESS_TOKEN = require('./token').token;
-const peeps = ['@kurtlogan', '@chrissysemens', '@shaun'];
+const peeps = ['@kurtlogan', '@chrissysemens', '@shaunforde'];
 
 var bodyParser = require('body-parser')
 var cors = require('cors')
@@ -18,13 +18,13 @@ app.get('/', (request, response) => {
 app.post('/pushbutton', cors(), (req, response) => {
     console.log('button pushed:', req.body.value)
 
-    const peep = peeps[Math.floor((Math.random() * peeps.length) + 1)];
+    const peep = peeps[Math.floor(Math.random() * peeps.length)];
 
     request('http://api.adviceslip.com/advice', function(error, response, body) {
         if (error) {
             //error handling here
         }
-
+        console.log(ACCESS_TOKEN)
         var quoteResponse = JSON.parse(response.body);
         var quoteText = peep + ', ' + quoteResponse.slip.advice;
 
@@ -33,7 +33,7 @@ app.post('/pushbutton', cors(), (req, response) => {
             uri: 'https://slack.com/api/chat.postMessage',
             form: {
                 token: ACCESS_TOKEN,
-                channel: 'test',
+                channel: 'general',
                 text: quoteText,
                 as_user: false,
                 link_names: true
